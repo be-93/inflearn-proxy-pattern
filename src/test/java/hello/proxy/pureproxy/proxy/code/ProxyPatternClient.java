@@ -7,6 +7,7 @@ public class ProxyPatternClient {
     public ProxyPatternClient(Subject subject) {
         this.subject = subject;
     }
+
     public void execute() {
         subject.operation();
     }

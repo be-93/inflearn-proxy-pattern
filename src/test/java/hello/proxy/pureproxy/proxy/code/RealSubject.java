@@ -10,6 +10,7 @@ public class RealSubject implements Subject{
         sleep(1000);
         return "data";
     }
+
     private void sleep(int millis) {
         try {
             Thread.sleep(millis);
