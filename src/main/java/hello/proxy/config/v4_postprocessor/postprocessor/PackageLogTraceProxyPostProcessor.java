@@ -7,11 +7,11 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
 @Slf4j
-public class PackageLogTracePostProcessor implements BeanPostProcessor {
+public class PackageLogTraceProxyPostProcessor implements BeanPostProcessor {
     private final String basePackage;
     private final Advisor advisor;
 
-    public PackageLogTracePostProcessor(String basePackage, Advisor advisor) {
+    public PackageLogTraceProxyPostProcessor(String basePackage, Advisor advisor) {
         this.basePackage = basePackage;
         this.advisor = advisor;
     }
