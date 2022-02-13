@@ -29,7 +29,7 @@ public class AutoProxyConfig {
     @Bean
     public Advisor advisor2(LogTrace logTrace) {
         AspectJExpressionPointcut pointcut = new AspectJExpressionPointcut();
-        pointcut.setExpression("execution(* hello.proxy.app..*(..))");
+        pointcut.setExpression("execution(* hello.proxy.app..*(..)) && !execution(* hello.proxy.app..noLog(..))");
 
         LogTraceAdvice advice = new LogTraceAdvice(logTrace);
 
